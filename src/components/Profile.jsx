@@ -1,36 +1,52 @@
 const Profile = ({ user }) => {
   return (
-    <div className="bg-white p-4 mt-4 rounded shadow">
-      <div className="flex gap-4 items-center">
+    <div className="backdrop-blur-lg bg-white/70 
+dark:bg-gray-800/70 
+border border-white/20
+mt-6 p-6 rounded-xl shadow-lg">
+
+      <div className="flex items-center gap-6">
 
         <img
           src={user.avatar_url}
-          className="w-24 h-24 rounded-full"
+          className="w-28 h-28 rounded-full border"
         />
 
         <div>
-          <h2 className="text-xl font-bold">
-            {user.name}
+          <h2 className="text-2xl font-bold dark:text-white">
+            {user.name || user.login}
           </h2>
 
-          <p>{user.bio}</p>
+          <p className="text-gray-600 dark:text-gray-300">
+            {user.bio}
+          </p>
 
-          <div className="flex gap-4 mt-2 text-sm">
-            <span>Followers: {user.followers}</span>
-            <span>Following: {user.following}</span>
-            <span>Repos: {user.public_repos}</span>
+          <div className="flex gap-4 mt-3 text-sm">
+            <span className="bg-gray-200 px-2 py-1 rounded">
+              👥 {user.followers}
+            </span>
+
+            <span className="bg-gray-200 px-2 py-1 rounded">
+              Following {user.following}
+            </span>
+
+            <span className="bg-gray-200 px-2 py-1 rounded">
+              Repos {user.public_repos}
+            </span>
           </div>
 
           <a
             href={user.html_url}
             target="_blank"
-            className="text-blue-500 text-sm"
+            className="inline-block mt-3 
+            text-blue-500"
           >
-            View Profile
+            Visit Profile →
           </a>
 
         </div>
       </div>
+
     </div>
   );
 };

@@ -11,13 +11,17 @@ const Search = ({ fetchUser }) => {
   return (
     <form onSubmit={handleSubmit} className="flex gap-2">
       <input
-        className="border p-2 w-full rounded"
-        placeholder="Enter GitHub username"
+        className="w-full p-3 rounded-lg border shadow-sm 
+        dark:bg-gray-800 dark:text-white"
+        placeholder="Search GitHub username..."
         value={username}
         onChange={(e) => setUsername(e.target.value)}
       />
 
-      <button className="bg-black text-white px-4 rounded">
+      <button
+        className="bg-blue-600 hover:bg-blue-700 
+        text-white px-5 rounded-lg"
+      >
         Search
       </button>
     </form>

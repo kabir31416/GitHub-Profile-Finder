@@ -30,8 +30,8 @@ function App() {
 
       setUser(userData);
       setRepos(repoData);
-
       setLoading(false);
+
     } catch (err) {
       setError(err.message);
       setLoading(false);
@@ -39,28 +39,39 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <div className="max-w-4xl mx-auto">
+    <div>
+      <div className="min-h-screen relative overflow-hidden
+            bg-linear-to-br 
+        from-slate-100 via-blue-50 to-indigo-100
+        dark:from-gray-900 dark:via-gray-800 dark:to-black">
 
-        <h1 className="text-3xl font-bold mb-4 text-center">
-          GitHub Profile Finder
-        </h1>
+        <div className="max-w-4xl mx-auto p-6">
 
-        <Search fetchUser={fetchUser} />
+          <div className="flex justify-between items-center mb-6">
+            <h1 className="text-3xl font-bold dark:text-white">
+              GitHub Profile Finder
+            </h1>
 
-        {loading && (
-          <p className="text-center mt-4">Loading...</p>
-        )}
+          </div>
 
-        {error && (
-          <p className="text-red-500 text-center mt-4">
-            {error}
-          </p>
-        )}
+          <Search fetchUser={fetchUser} />
 
-        {user && <Profile user={user} />}
-        {repos.length > 0 && <RepoList repos={repos} />}
+          {loading && (
+            <p className="text-center mt-6 dark:text-white">
+              Loading profile...
+            </p>
+          )}
 
+          {error && (
+            <p className="text-red-500 text-center mt-4">
+              {error}
+            </p>
+          )}
+
+          {user && <Profile user={user} />}
+          {repos.length > 0 && <RepoList repos={repos} />}
+
+        </div>
       </div>
     </div>
   );

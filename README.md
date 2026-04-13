@@ -1,16 +1,91 @@
-# React + Vite
+# 🚀 GitHub Profile Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive GitHub Profile Finder built using React and Tailwind CSS.  
+This application allows users to search GitHub profiles and view detailed information including repositories, followers, and profile stats with a clean and smart UI.
 
-Currently, two official plugins are available:
+## 🔗 Live Demo
+https://github-profile-finder-kabir31416.netlify.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+- 🔍 Search GitHub users by username
+- 👤 View profile information
+- 📊 Followers / Following / Repositories count
+- ⭐ View repository stars
+- 📁 Latest repositories list
+- 🌙 Dark / Light mode toggle
+- 📱 Fully responsive design
+- ⚡ Fast API fetching
+- ❌ Error handling (User not found)
+- ⏳ Loading state
+- 🎨 Modern gradient UI
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠 Tech Stack
 
-## Expanding the ESLint configuration
+**Frontend**
+- React
+- Tailwind CSS
+- Vite
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+**API**
+- GitHub REST API
+
+## 📦 Dependencies
+
+```bash
+react
+react-dom
+tailwindcss
+vite
+```
+
+## ⚙️ Run Locally
+
+```bash
+git clone https://github.com/yourusername/github-profile-finder.git
+cd github-profile-finder
+npm install
+npm run dev
+```
+
+## 📂 Project Structure
+```bash
+github-profile-finder
+│
+├── public
+├── src
+│   ├── components
+│   │   ├── Search.jsx
+│   │   ├── Profile.jsx
+│   │   └── RepoList.jsx
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── index.html
+└── package.json
+```
+## 🌐 API Used
+```bash
+GitHub Users API
+https://api.github.com/users/{username}
+
+GitHub Repositories API
+https://api.github.com/users/{username}/repos
+```
+## 🎯 Future Improvements
+- Pagination for repositories
+- Filter repositories by language
+- Sort by stars
+- Search history
+- Skeleton loading
+- Copy profile link
+- Top starred repos section
+
+## 🌟 Show your support
+Give a ⭐ if you like this project
+
+## 👨‍💻 Author
+Sahariar Kabir
+GitHub: https://github.com/kabir31416/
